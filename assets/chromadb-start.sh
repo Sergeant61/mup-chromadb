@@ -23,5 +23,4 @@ sudo docker run \
   --publish=$CHROMADB_HOST:$CHROMADB_PORT:8000 \
   --volume $CHROMADB_DIR/data:/data \
   --name=chromadb \
-  chromadb/chroma:$CHROMADB_VERSION \
-  -e IS_PERSISTENT=TRUE
+  chromadb/chroma:$CHROMADB_VERSION
