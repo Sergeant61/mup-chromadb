@@ -36,6 +36,9 @@ module.exports = {
       if (!config.app.docker.args) {
         config.app.docker.args = [];
       }
+
+      config.app.docker.args.push('--link=chromadb:chromadb');
+      config.app.docker.args.push('--env=CHROMA_DB_URL=http://chromadb:8000');
     }
   },
   hooks: {
